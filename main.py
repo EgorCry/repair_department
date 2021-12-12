@@ -48,7 +48,10 @@ if __name__ == '__main__':
         print(temperature, humidity)
         for i in ingredients:
             print(i.name + ':')
-            if i.check_weight() < .1:
+            if i.check_weight() < 0.0:
+                print(f'Error! No more {i.name} left!!!')
+                i.weight = 0.0
+            elif i.check_weight() < .1:
                 print(f'Only {i.check_weight()*100}% of {i.name} left!!!')
             else:
                 print(f'{i.check_weight()*100}% of product left.')
