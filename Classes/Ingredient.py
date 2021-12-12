@@ -14,6 +14,7 @@ class Ingredient:
         self.min_humidity = min_humidity
         self.min_temperature = min_temperature
         self.max_temperature = max_temperature
+        self.hours = 24
 
     def change_weight(self, change):
         """When we use part of ingredient, we should to change it weight."""
@@ -37,4 +38,4 @@ class Ingredient:
 
     def check_expiration_date(self):
         """Returns how many days left."""
-        return False if self.expiration_date < 2 else True
+        return True if self.expiration_date < 2 else False
