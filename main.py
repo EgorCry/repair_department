@@ -36,7 +36,7 @@ if __name__ == '__main__':
     while True:
         temperature += random.uniform(-.5, .5)
         humidity += random.uniform(-.5, .5)
-        dust += random.uniform(-5, 5)
+        dust += random.uniform(-1, 3)
         for i in ingredients:
             chance = random.choice([1, 2])
             if chance == 1:
